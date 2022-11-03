@@ -60,8 +60,8 @@ test()
 use_package("stringr")
 
 #2.18
-gitcreds::gitcreds_set()
-gitcreds::gitcreds_get()
+#gitcreds::gitcreds_set()
+#gitcreds::gitcreds_get()
 usethis::use_git()
 usethis::use_github()
 
