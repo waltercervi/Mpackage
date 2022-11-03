@@ -34,9 +34,14 @@ exists("strsplit1", where = globalenv(), inherits = FALSE)
 library(Mpackage)
 # 2.9 commit all changes from now on
 
+#2.10
 check()
-document()
+
+#2.12
 use_mit_license()
+
+#2.13
+document()
 writeLines(readLines("LICENSE"))
 install()
 
