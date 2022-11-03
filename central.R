@@ -25,6 +25,7 @@ strsplit1 <- function(x, split) {
 
 #2.8
 usethis::use_r("strsplit1")
+usethis::use_r("Allocation1")
 
 #2.8
 load_all()
@@ -63,3 +64,5 @@ gitcreds::gitcreds_set()
 gitcreds::gitcreds_get()
 usethis::use_git()
 usethis::use_github()
+
+
