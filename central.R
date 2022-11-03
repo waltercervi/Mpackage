@@ -5,7 +5,7 @@ install.packages("rex")
 install.packages("rematch2")
 library(rematch2)
 library(devtools)
-create_package("C:/MGrid")
+create_package("C:/Mpackage")
 usethis::use_git()
 
 (x <- "alfa,bravo,charlie,delta")
