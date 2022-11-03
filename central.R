@@ -39,19 +39,26 @@ check()
 
 #2.12
 use_mit_license()
+writeLines(readLines("LICENSE"))
 
 #2.13
 document()
-writeLines(readLines("LICENSE"))
+
+#2.14
+check()
+
+#2.15
 install()
 
-
+#2.16
 use_testthat()
 use_test("strsplit1")
 test()
 
+#2.17
 use_package("stringr")
 
+#2.18
 gitcreds::gitcreds_set()
 gitcreds::gitcreds_get()
 usethis::use_git()
