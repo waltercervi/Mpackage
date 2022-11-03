@@ -5,9 +5,14 @@ install.packages("rex")
 install.packages("rematch2")
 library(rematch2)
 library(devtools)
+
+# 2.5
 create_package("C:/Mpackage")
+
+# 2.6
 usethis::use_git()
 
+#2.7
 (x <- "alfa,bravo,charlie,delta")
 strsplit(x, split = ",")
 str(strsplit(x, split = ","))
@@ -18,6 +23,7 @@ strsplit1 <- function(x, split) {
   strsplit(x, split = split)[[1]]
 }
 
+#2.8
 usethis::use_r("strsplit1")
 
 load_all()
