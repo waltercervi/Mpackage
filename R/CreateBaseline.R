@@ -1,3 +1,9 @@
+#' Create LandUse baseline
+#'
+#' @return
+#' @export
+#'
+#' @examples
 doCreateBaseline<-function(){
   for (s in 1:length(SectorsNm)){
     print(paste("Baseline -",SectorsNm[s]))

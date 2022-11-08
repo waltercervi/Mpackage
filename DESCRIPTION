@@ -13,6 +13,9 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    stringr
+    raster,
+    sp,
+    stringr,
+    terra
 URL: https://github.com/waltercervi/Mpackage
 BugReports: https://github.com/waltercervi/Mpackage/issues

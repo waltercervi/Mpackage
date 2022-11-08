@@ -27,11 +27,15 @@ strsplit1 <- function(x, split) {
 usethis::use_r("strsplit1")
 usethis::use_r("Allocation")
 usethis::use_r("CorrectLUtotal")
+usethis::use_r("CreateBaseline")
+usethis::use_r("CreateExoMap")
+usethis::use_r("CreateSuitmap")
+usethis::use_r("ReprojShift")
 
 #2.8
 load_all()
 strsplit1(x, split = ",")
-exists("CorrectLUtotal", where = globalenv(), inherits = FALSE)
+exists("CreateBaseline", where = globalenv(), inherits = FALSE)
 
 library(Mpackage)
 # 2.9 commit all changes from now on
@@ -54,11 +58,11 @@ install()
 
 #2.16
 use_testthat()
-use_test("CorrectLUtotal")
+use_test("CreateBaseline")
 test()
 
 #2.17
-use_package("stringr")
+use_package("raster", "terra", "sp")
 
 #2.18
 #gitcreds::gitcreds_set()
