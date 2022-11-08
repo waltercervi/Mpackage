@@ -1,3 +1,9 @@
+#' Combine all Ag land uses
+#'
+#' @return
+#' @export
+#'
+#' @examples
  doCorrectLUtotal<-function(){
     CorrLU=LUtotal
     CorrLU[CorrLU<=1]<-1
