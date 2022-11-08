@@ -1,3 +1,9 @@
+#' Create a general exosgenous map
+#'
+#' @return
+#' @export
+#'
+#' @examples
 doCreateExoMap<-function(){
   # relaxExoNoLU : if demand more than available cropland then exo based on LU relaxed
   sumDemand=0
@@ -27,7 +33,7 @@ doCreateExoMap<-function(){
   ExoMap <- sum(out)
   ExoMap[ExoMap>1]<-1
   plot(ExoMap)
-  
+
   # Water=raster("MagnetGridR/SpatialData/FRA/Water.tif")
   # Urban=raster("MagnetGridR/SpatialData/FRA/Urban.tif")
   # ExoWU=Water+Urban
@@ -36,9 +42,9 @@ doCreateExoMap<-function(){
   ExoWU=ExoMap
   #ExoWU=doReprojShift(ExoMap,TRUE)
   ExoWU=raster::intersect(ExoWU,intersectMap)
-  
+
   ExoCrop=1-relaxExoNoLU*LUtotal
-  
+
   cellStats(1-ExoCrop, 'sum')*Km2PerGrid;sumDemand
   #ExoCrop=ExoCrop-minValue(ExoCrop)
   #ExoCrop=ExoCrop/maxValue(ExoCrop)

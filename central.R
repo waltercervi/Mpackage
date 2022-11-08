@@ -58,11 +58,11 @@ install()
 
 #2.16
 use_testthat()
-use_test("CreateBaseline")
+use_test("CreateSuitmap")
 test()
 
 #2.17
-use_package("raster", "terra", "sp")
+use_package("sp")
 
 #2.18
 #gitcreds::gitcreds_set()

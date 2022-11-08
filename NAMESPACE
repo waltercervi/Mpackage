@@ -3,4 +3,6 @@
 export(doAllocation)
 export(doCorrectLUtotal)
 export(doCreateBaseline)
+export(doCreateExoMap)
+export(doCreateSuitMap)
 export(strsplit1)

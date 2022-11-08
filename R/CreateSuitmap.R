@@ -1,3 +1,9 @@
+#' Create Suitability maps
+#'
+#' @return
+#' @export
+#'
+#' @examples
  doCreateSuitMap<-function(){
     dir.create(paste("MagnetGridR/SpatialData/InputData_LandUseModel/",Scenarios,"/",Years[i],"/SuitMap/",sep=""), showWarnings = FALSE)
     for (s in 1:length(SectorsNm)){
@@ -10,12 +16,12 @@
       # # # opportunity costs
       #OppoC <- LUmap/GridcellSize * SuitMap
       OppoC <- (1 - LUmap/GridcellSize) * SuitMap
-      
+
       # sunk costs
       Inv <- eval(parse(text=paste("Inv_",SectorsNm[s],"=InvestmentCosts$",SectorsNm[s],sep="")))
       #InvC <- LUmap/GridcellSize * Inv
       InvC <- (1 - LUmap/GridcellSize) * Inv
-      
+
       SuitMap <- SuitMap - OppoC - InvC
 
       writeRaster(SuitMap,paste("MagnetGridR/SpatialData/InputData_LandUseModel/",Scenarios,"/",Years[i],"/SuitMap/",SectorsNm[s],".tif",sep=""), overwrite=T)
@@ -23,5 +29,4 @@
     }
    return(intersectMap)
  }
- 
- 
+
