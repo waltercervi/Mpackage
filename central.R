@@ -62,7 +62,7 @@ use_test("ReprojShift")
 test()
 
 #2.17
-use_package("sp")
+use_package("raster")
 
 #2.18
 #gitcreds::gitcreds_set()
@@ -70,4 +70,6 @@ use_package("sp")
 usethis::use_git()
 usethis::use_github()
 
+#2.19
+use_readme_rmd()
 
