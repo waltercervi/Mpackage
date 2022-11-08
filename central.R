@@ -26,11 +26,12 @@ strsplit1 <- function(x, split) {
 #2.8
 usethis::use_r("strsplit1")
 usethis::use_r("Allocation")
+usethis::use_r("CorrectLUtotal")
 
 #2.8
 load_all()
 strsplit1(x, split = ",")
-exists("strsplit1", where = globalenv(), inherits = FALSE)
+exists("CorrectLUtotal", where = globalenv(), inherits = FALSE)
 
 library(Mpackage)
 # 2.9 commit all changes from now on
@@ -53,7 +54,7 @@ install()
 
 #2.16
 use_testthat()
-use_test("strsplit1")
+use_test("CorrectLUtotal")
 test()
 
 #2.17
