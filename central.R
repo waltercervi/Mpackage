@@ -58,7 +58,7 @@ install()
 
 #2.16
 use_testthat()
-use_test("CreateSuitmap")
+use_test("ReprojShift")
 test()
 
 #2.17

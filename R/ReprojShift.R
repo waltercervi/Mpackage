@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param map
+#' @param cropping
+#'
+#' @return
+#' @export
+#'
+#' @examples
 doReprojShift<-function(map,cropping){
   map=projectRaster(map, res=GridcellSize, crs=projection(MapREG), method="bilinear")
   if (cropping==TRUE){
