@@ -25,7 +25,7 @@ strsplit1 <- function(x, split) {
 
 #2.8
 usethis::use_r("strsplit1")
-usethis::use_r("Allocation1")
+usethis::use_r("Allocation")
 
 #2.8
 load_all()
