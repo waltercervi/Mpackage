@@ -4,6 +4,7 @@ install.packages("stringr")
 install.packages("stringi")
 install.packages("rex")
 install.packages("rematch2")
+install.packages("pkg")
 library(rematch2)
 library(devtools)
 
