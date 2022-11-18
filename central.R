@@ -33,11 +33,12 @@ usethis::use_r("CreateBaseline")
 usethis::use_r("CreateExoMap")
 usethis::use_r("CreateSuitmap")
 usethis::use_r("ReprojShift")
+usethis::use_r("RescaleSuitmap")
 
 #2.8
 load_all()
 strsplit1(x, split = ",")
-exists("CreateBaseline", where = globalenv(), inherits = FALSE)
+exists("RescaleSuitmap", where = globalenv(), inherits = FALSE)
 
 library(Mpackage)
 # 2.9 commit all changes from now on
@@ -60,7 +61,7 @@ install()
 
 #2.16
 use_testthat()
-use_test("ReprojShift")
+use_test("RescaleSuitmap")
 test()
 
 #2.17

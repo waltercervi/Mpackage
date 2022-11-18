@@ -1,9 +1,15 @@
+#' Rescaling suitability maps
+#'
+#' @return
+#' @export
+#'
+#' @examples
 doRescaleSuitMap<-function(){
   NmLis=c()
     for (s in 1:length(SectorsNm)){
       # s=3
       print(paste(Years[i],SectorsNm[s]))
-      
+
       # Land use map : read rda file -> select region -> shift operation (for combining) OPEN T-1 LAND USE MAP  TO BE MODELLED --------------
       LUmap <- raster(paste("MagnetGridR/SpatialData/InputData_LandUseModel/",Scenarios,"/",Years[i-1],"/LandUse/",SectorsNm[s],".tif",sep=""))
 
@@ -15,7 +21,7 @@ doRescaleSuitMap<-function(){
       SuitMap=Km2PerGrid*SuitMap*MaxCover[s]
       SuitMap=crop(SuitMap,MapREG)
 
-      # create 
+      # create
       eval(parse(text=paste("Suit_",SectorsNm[s],"=SuitMap",sep="")))
       eval(parse(text=paste("LU_",SectorsNm[s],"=LUmap",sep="")))
       if (s==1){
