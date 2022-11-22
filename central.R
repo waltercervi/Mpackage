@@ -34,6 +34,7 @@ usethis::use_r("CreateExoMap")
 usethis::use_r("CreateSuitmap")
 usethis::use_r("ReprojShift")
 usethis::use_r("RescaleSuitmap")
+usethis::use_r("GetINI")
 
 #2.8
 load_all()
