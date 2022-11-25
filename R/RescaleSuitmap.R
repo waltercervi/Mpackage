@@ -19,7 +19,7 @@ doRescaleSuitMap<-function(){
       SuitMap=SuitMap/RangeNPV
       SuitMap[SuitMap>1]<-1
       SuitMap=Km2PerGrid*SuitMap*MaxCover[s]
-      SuitMap=crop(SuitMap,MapREG)
+      #SuitMap=crop(SuitMap,MapREG)
 
       # create
       eval(parse(text=paste("Suit_",SectorsNm[s],"=SuitMap",sep="")))
