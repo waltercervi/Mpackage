@@ -1,15 +1,15 @@
 
 .libPaths("C:/R/win-library/")
-install.packages("stringr")
-install.packages("stringi")
-install.packages("rex")
-install.packages("rematch2")
-install.packages("pkg")
+# install.packages("stringr")
+# install.packages("stringi")
+# install.packages("rex")
+# install.packages("rematch2")
+# install.packages("pkg")
 library(rematch2)
 library(devtools)
 
 # 2.5
-create_package("C:/Mpackage")
+# create_package("C:/Mpackage")
 
 # 2.6
 usethis::use_git()
