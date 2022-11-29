@@ -38,7 +38,7 @@ usethis::use_r("GetINI")
 
 #2.8
 load_all()
-strsplit1(x, split = ",")
+.strsplit1(x, split = ",")
 exists("CreateExoMap", where = globalenv(), inherits = FALSE)
 
 library(Mpackage)
