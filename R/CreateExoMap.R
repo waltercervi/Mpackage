@@ -40,8 +40,6 @@ doCreateExoMap<-function(){
   ExoCrop=1-relaxExoNoLU*LUtotal
 
   cellStats(1-ExoCrop, 'sum')*Km2PerGrid;sumDemand
-  #ExoCrop=ExoCrop-minValue(ExoCrop)
-  #ExoCrop=ExoCrop/maxValue(ExoCrop)
   ExoCrop[ExoCrop<0]<-0
   plot(ExoCrop)
   plot(ExoWU)

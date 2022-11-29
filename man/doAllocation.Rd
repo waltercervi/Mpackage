@@ -5,9 +5,9 @@
 \title{Title
 #'}
 \usage{
-doAllocation(Niter)
+doAllocation(Niter, beta)
 
-doAllocation(Niter)
+doAllocation(Niter, beta)
 }
 \arguments{
 \item{beta}{}
