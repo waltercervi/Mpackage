@@ -1,4 +1,4 @@
-#' Create a general exosgenous map
+#' Create a general exogenous map
 #'
 #' @return
 #' @export
@@ -26,7 +26,6 @@ doCreateExoMap<-function(){
     #e=3
     fileNm=paste("MagnetGridR/SpatialData/InputData_LandUseModel/",Scenarios,"/",Years[i],"/Exogenous/",ExogenousNm[e],".tif",sep="")
     ExoMap=raster(fileNm)
-    #ExoMap=crop(raster(fileNm),MapREG)
     out <- stack(out, ExoMap)
   }
   out[is.na(out)]<-0
