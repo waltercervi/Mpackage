@@ -33,13 +33,8 @@ doCreateExoMap<-function(){
   ExoMap[ExoMap>1]<-1
   plot(ExoMap)
 
-  # Water=raster("MagnetGridR/SpatialData/FRA/Water.tif")
-  # Urban=raster("MagnetGridR/SpatialData/FRA/Urban.tif")
-  # ExoWU=Water+Urban
   # ExoWU[ExoWU>1]<-1
-  # ExoWU=crop(ExoWU,MapREG)
   ExoWU=ExoMap
-  #ExoWU=doReprojShift(ExoMap,TRUE)
   ExoWU=raster::intersect(ExoWU,intersectMap)
 
   ExoCrop=1-relaxExoNoLU*LUtotal
