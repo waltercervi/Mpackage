@@ -16,7 +16,6 @@ doCreateExoMap<-function(){
   }else{
     relaxExoNoLU=1.05
   }
-
   # CREATE EXOGENOUS MAP -------------------------------------------------------------------------------------------------------------
   #
   ExogenousNm=GetINI("ExogenousLandUsesLis",1)
@@ -35,7 +34,7 @@ doCreateExoMap<-function(){
 
   # ExoWU[ExoWU>1]<-1
   ExoWU=ExoMap
-  ExoWU=raster::intersect(ExoWU,intersectMap)
+  ExoWU=intersect(ExoWU,intersectMap)
 
   ExoCrop=1-relaxExoNoLU*LUtotal
 
