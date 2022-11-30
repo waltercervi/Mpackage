@@ -30,7 +30,7 @@ doCreateExoMap<-function(){
   out[is.na(out)]<-0
   ExoMap <- sum(out)
   ExoMap[ExoMap>1]<-1
-  plot(ExoMap)
+  #plot(ExoMap)
 
   # ExoWU[ExoWU>1]<-1
   ExoWU=ExoMap
@@ -38,14 +38,14 @@ doCreateExoMap<-function(){
   ExoCrop=1-relaxExoNoLU*LUtotal
   cellStats(1-ExoCrop, 'sum')*Km2PerGrid;sumDemand
   ExoCrop[ExoCrop<0]<-0
-  plot(ExoCrop)
-  plot(ExoWU)
+  # plot(ExoCrop)
+  # plot(ExoWU)
   ExoWU[is.na(ExoWU)]<-0
   Exo=ExoWU+ExoCrop
   Exo[Exo>1]<-1
   Exo[is.na(Exo)]<-0
   (sumExo=cellStats(1-Exo, 'sum')*Km2PerGrid);sumDemand
   Exo=Exo*Km2PerGrid
-  plot(Exo)
+  # plot(Exo)
   return(Exo)
 }
