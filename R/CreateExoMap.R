@@ -1,4 +1,4 @@
-#' Create a general exogenous map
+#' Create a general exo map
 #'
 #' @return
 #' @export
