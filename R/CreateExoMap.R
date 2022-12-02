@@ -1,4 +1,4 @@
-#' Create a general exo map
+#' Create a general exogenous map
 #'
 #' @return
 #' @export
@@ -34,7 +34,7 @@ doCreateExoMap<-function(){
 
   # ExoWU[ExoWU>1]<-1
   ExoWU=ExoMap
-  ExoWU=intersect(ExoWU,intersectMap)
+  ExoWU=raster::intersect(ExoWU,intersectMap)
   ExoCrop=1-relaxExoNoLU*LUtotal
   cellStats(1-ExoCrop, 'sum')*Km2PerGrid;sumDemand
   ExoCrop[ExoCrop<0]<-0

@@ -2,10 +2,10 @@
 % Please edit documentation in R/CreateExoMap.R
 \name{doCreateExoMap}
 \alias{doCreateExoMap}
-\title{Create a general exo map}
+\title{Create a general exogenous map}
 \usage{
 doCreateExoMap()
 }
 \description{
-Create a general exo map
+Create a general exogenous map
 }
