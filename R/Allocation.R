@@ -1,4 +1,4 @@
-#' Title
+#' Allocation algorithm
 #'#'
 #' @param Niter
 #' @param beta
