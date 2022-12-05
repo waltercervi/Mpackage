@@ -19,7 +19,6 @@ doCreateExoMap<-function(){
   # CREATE EXOGENOUS MAP -------------------------------------------------------------------------------------------------------------
   #
   ExogenousNm=GetINI("ExogenousLandUsesLis",1)
-  ExogenousNm = ExogenousNm[1:2]
   out=stack()
   for (e in 1:length(ExogenousNm)){
     #e=3

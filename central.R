@@ -38,8 +38,8 @@ usethis::use_r("GetINI")
 
 #2.8
 load_all()
-.strsplit1(x, split = ",")
-exists("Allocation", where = globalenv(), inherits = FALSE)
+#.strsplit1(x, split = ",")
+exists("CreateExoMap", where = globalenv(), inherits = FALSE)
 
 library(Mpackage)
 # 2.9 commit all changes from now on
@@ -62,7 +62,7 @@ install()
 
 #2.16
 use_testthat()
-use_test("Allocation")
+use_test("CreateExoMap")
 test()
 
 #2.17
