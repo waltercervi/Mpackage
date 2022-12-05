@@ -1,6 +1,6 @@
 
 .libPaths("C:/R/win-library/")
- install.packages("devtools", dependencies = T)
+# install.packages("devtools", dependencies = T)
 # install.packages("rlang", dependencies = T)
 # install.packages("rex")
 # install.packages("rematch2")
