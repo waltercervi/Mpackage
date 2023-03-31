@@ -39,7 +39,7 @@ usethis::use_r("GetINI")
 #2.8
 load_all()
 #.strsplit1(x, split = ",")
-exists("CreateBaseline", where = globalenv(), inherits = FALSE)
+exists("CreateSuitmap", where = globalenv(), inherits = FALSE)
 
 library(Mpackage)
 # 2.9 commit all changes from now on
@@ -62,7 +62,7 @@ install()
 
 #2.16
 use_testthat()
-use_test("CreateBaseline")
+use_test("CreateSuitmap")
 test()
 
 #2.17
