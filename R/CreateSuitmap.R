@@ -11,17 +11,14 @@
       if (s==1){intersectMap=LUmap}
       fileNm=paste("MagnetGridR/SpatialData/InputData_LandUseModel/",Scenarios,"/",Years[i],"/NPV/NPV_",SectorsNm[s],".tif",sep="")
       SuitMap=raster(fileNm)
-      #SuitMap=crop(raster(fileNm),MapREG)
-      # SuitMap=doReprojShift(SuitMap,FALSE)
-      # SuitMap=raster::intersect(SuitMap,intersectMap)# fix the dimensions
+
       # # # opportunity costs
-      #OppoC <- LUmap/GridcellSize * SuitMap
-      OppoC <- (1 - LUmap/GridcellSize) * SuitMap
+      OppoC <- (1 - LUmap/HaPerGrid) * SuitMap
 
       # sunk costs
       Inv <- eval(parse(text=paste("Inv_",SectorsNm[s],"=InvestmentCosts$",SectorsNm[s],sep="")))
-      #InvC <- LUmap/GridcellSize * Inv
-      InvC <- (1 - LUmap/GridcellSize) * Inv
+
+      InvC <- (1 - LUmap/HaPerGrid) * Inv
 
       SuitMap <- SuitMap - OppoC - InvC
 
