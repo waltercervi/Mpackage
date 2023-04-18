@@ -76,7 +76,7 @@ doAllocation<-function(Niter, beta){
       print (paste("  ->",round(Demand-SumMap),"ha [",round(100*(Demand-SumMap)/Demand,2),"% ] is not allocated!"))
     }
     #if (SumIter<10){
-      temp=eval(parse(text=paste("M_",SectorsNm[x],"=M_",SectorsNm[x],"*",Km2PerGrid,sep="")))
+      temp=eval(parse(text=paste("M_",SectorsNm[x],"=ScaleFactor*M_",SectorsNm[x],"*",Km2PerGrid,sep="")))
       dir.create(paste("MagnetGridR/SpatialData/InputData_LandUseModel/",Scenarios,"/",Years[i],"/LandUse/",sep=""), showWarnings = FALSE)
       writeRaster(temp,paste("MagnetGridR/SpatialData/InputData_LandUseModel/",Scenarios,"/",Years[i],"/LandUse/",SectorsNm[x],".tif",sep=""), overwrite=T)
     #}
