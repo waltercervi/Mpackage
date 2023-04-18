@@ -47,7 +47,6 @@ library(Mpackage)
 #2.10
 check()
 
-#2.12
 use_mit_license()
 writeLines(readLines("LICENSE"))
 
