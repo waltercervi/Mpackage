@@ -61,7 +61,7 @@ install()
 
 #2.16
 use_testthat()
-use_test("CreateSuitmap")
+use_test("Allocation")
 test()
 
 #2.17
