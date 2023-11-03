@@ -74,6 +74,8 @@ doAllocation<-function(Niter, beta){
     if (Demand>1.0001*SumMap){
       print (paste("WARNING: crop",SectorsNm[x],"not able to allocate demand (constrained)!!!"))
       print (paste("  ->",round(Demand-SumMap),"ha [",round(100*(Demand-SumMap)/Demand,2),"% ] is not allocated!"))
+      writeLines(paste("  ->",round(Demand-SumMap),"ha [",round(100*(Demand-SumMap)/Demand,2),"% ] is not allocated!"),
+                 paste("MagnetGridR/",Scenarios,Years[i],SectorsNm[x],"analysis.txt", sep=""))
     }
     #if (SumIter<10){
       temp=eval(parse(text=paste("M_",SectorsNm[x],"=ScaleFactor*M_",SectorsNm[x],"*",Km2PerGrid,sep="")))
